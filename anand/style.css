@@ -1,0 +1,2918 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.up-arrow{
+   position: fixed;
+   top: 830px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+}
+.header-section{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:url("./IMAGES/bg1.webp");
+}
+.header-section a{
+    padding-left: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.header-section a:hover{
+    text-decoration: underline red 5px;
+}
+.close-icon{
+    display: none;
+}
+.scene {
+  will-change: transform;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  animation: 5s shake ease-in-out infinite, 5s moving ease-in-out infinite;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
+}
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.95;
+  /* border: 5px solid black; */
+  box-shadow: 0 0 15px 0px salmon;
+  backface-visibility: hidden;
+}
+/* Colors and positions */
+.front  { background: linear-gradient(125deg,skyblue,white); transform: rotateY(0deg) translateZ(100px); }
+.back   { background: linear-gradient(125deg,skyblue,white); transform: rotateY(180deg) translateZ(100px); }
+.right  { background: linear-gradient(125deg,skyblue,white); transform: rotateY(90deg) translateZ(100px); }
+.left   { background: linear-gradient(125deg,skyblue,white); transform: rotateY(-90deg) translateZ(100px); }
+.top    { background: linear-gradient(125deg,skyblue,white); transform: rotateX(90deg) translateZ(100px); }
+.bottom { background: linear-gradient(125deg,skyblue,white); transform: rotateX(-90deg) translateZ(100px); }
+
+.name-card{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:url("./IMAGES/background.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+}
+.name-h1{
+    color: #000000;
+    font-size: 50px;
+}
+.name-h1 span{
+    color:#890620 ;
+    font-family: cursive;
+}
+.name-h2{
+    color: #000000;
+    font-size: 40px;
+}
+.social-interaction{
+    padding: 20px !important;
+    animation: float 5s ease-in-out infinite;
+    padding-top: 5px !important;
+}
+.social-interaction img{
+    width: 80px;
+    height: 85px;
+}
+.about-section{
+    display: flex ;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 450px;
+    
+}
+.about-section img{
+    width: 400px;
+    height: 350px;
+    padding-left: 30px;
+    padding-top: 50px;
+    z-index: 5;
+    animation: scale 5s ease-in-out infinite;
+    border-radius: 20px ;
+}
+.about-name{
+    display: inline;
+    margin-top: 60px;
+    gap: 20px;
+}
+.about-name h1{
+    color: #A63D40;
+    text-decoration: underline;
+}
+.about-name p{
+    font-size: 40px;
+    word-spacing: 15px;
+    text-align: justify;
+}
+.button{
+  color: #c724ff;
+  background-color: #c724ff;
+  border: 2px solid #c724ff;
+  box-shadow:
+    0 0 5px #c724ff,
+    0 0 15px #c724ff,
+    0 0 30px #c724ff;
+  max-width: 200px;
+  margin-top: 30px;
+  margin-left: 25%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+}
+.button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.button:hover {
+ background: #c724ff;
+  color: #111;
+  box-shadow:
+    0 0 20px #c724ff,
+    0 0 40px #c724ff,
+    0 0 80px #c724ff;
+}
+
+.skill-section{
+    margin-top: 30px ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap ;
+    align-items: center;
+    background: url("./IMAGES/bg1.webp");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 20px;
+    /* border-bottom: 4px solid #E9B872; */
+}
+
+.skill-section h1{
+   color: black;
+   font-family: 'Courier New', Courier, monospace;
+}
+.skill{
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px ;
+    margin-top: 60px ;
+}
+
+
+.skill img{
+   width: 250px ;
+   height: 300px ;
+   border-radius: 20px;
+}
+.skill img:hover{
+   transform: scale(1.3);
+}
+.certification-section{
+   display: flex ;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 40px ;
+   flex-wrap: wrap ;
+   padding-bottom: 50px;
+}
+.certification-section h1{
+  background-color: #F5B700;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  text-align: center;
+}
+.certificate1{
+   display: flex ;
+   flex-direction: column ;
+   width: 590px ;
+   height: 100% ;
+   border: 2px solid black ;
+   padding: 22px ;
+   border-radius: 20px;
+   margin-top: 10px;
+   gap: 10px;
+   flex-wrap: wrap ;
+   margin-top: 20px;
+}
+.certificate1 img{
+  width:550px;
+  height: 570px;
+}
+.certificate1 img:hover{
+  transform: scale(0.9);
+}
+
+.project{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding-top: 35px;
+   padding-bottom: 35px;
+   border-bottom: 4px solid #E9B872;
+   border-bottom: 50px;
+}
+.project h1{
+  background-color: #F5B700;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  text-align: center;
+}
+.project1:hover{
+   transform: scaleX(1.2);
+}
+.project1{
+   /* display: flex;
+   flex-direction: column; */
+   border: 2px solid black;
+   box-shadow: 0 0 10px 5px black;
+   width: 500px;
+   border-top-left-radius: 50px;
+   margin-top: 20px;
+   flex-wrap: wrap !important;
+}
+.project1 img{
+   border-top-left-radius: 50px;
+   padding: 2px;
+}
+.project1 p{
+   padding: 10px;
+   font-weight: bold;
+   text-align: justify;
+}
+.service{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px !important;
+}
+.service h1{
+  background-color: #F5B700;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  text-align: center;
+}
+.service-button{
+  margin-top: 20px;
+   padding: 20px;
+   font-size: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom-left-radius: 20px;
+   border-top-right-radius: 20px;
+   background-color: #1B2021;
+   color: white;
+   width: 50%;
+}
+.service-button svg{
+    width: 50px;
+    height: 50px;
+}
+.service-para{
+    border: 3px solid black;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+    /* text-align: justify; */
+}
+.contact-section {
+  display: flex;
+  gap: 30px;
+  margin: 30px !important;
+  border: 2px solid black;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  border-radius: 20px;
+  background-color: white;
+  flex-wrap: wrap !important;
+}
+
+.contact-section h1 {
+  text-align: center;
+}
+.contact-section img{
+   border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+}
+.contact-details {
+  flex-grow: 1;
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: wrap !important;
+}
+.contact-details h1{
+  text-decoration: underline blue;
+}
+.contact-details img{
+  width: 70px;
+  height: 90px;
+  margin-top: 0;
+}
+
+.phone-section{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap !important;
+   gap: 20px;
+   margin-top: 20px;
+}
+.phone-section strong{
+   font-size: 30px;
+   padding-top: 20px;
+}
+footer{
+   width: 100%;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: grey;
+   flex-wrap: wrap !important;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateY(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateY(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateY(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(180deg) rotateY(0deg); }
+  50%  { transform: rotateX(180deg) rotateY(180deg); }
+  75%  { transform: rotateX(0deg) rotateY(180deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+@keyframes moving {
+  0% {
+    top: 0;
+    left: 80px;
+    transform: scale(0.5);
+  }
+  25% {
+    top: 100px;
+    left: 160px;
+    transform: scale(0.9);
+  }
+  50% {
+    top: 250px;
+    left: 240px;
+    transform: scale(1.3);
+  }
+  75% {
+    top: 250px;
+    left: 160px;
+    transform: scale(0.8);
+  }
+  100% {
+    top: 1000px;
+    left: 80px;
+    transform: scale(0.4);
+  }
+}
+
+@keyframes float {
+0% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(20px);
+}
+100% {
+transform: translateY(0);
+}
+}
+
+@media (max-width:1700px) {
+  .header-section{
+    display: flex;
+  }
+  
+  .up-arrow{
+   position: fixed;
+   top: 530px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+  }
+  .close-icon{
+    display: none;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 30px;
+  }
+  .name-h2{
+    font-size: 25px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 450px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 20px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 80px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 20px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 800px;
+    background-size: 1700px 770px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 100px;
+    height: 150px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 65%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 750px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 30px;
+    width: 60%;
+  }
+  .profile img{
+    transform: scale(0.3);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 65%;
+    height: 350px;
+    
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .project1:hover{
+    transform: scale(0.5);
+  }
+  .project1 img{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 70px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 30px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 800px;
+   padding-right: 0px;
+  }
+}
+
+
+@media (max-width:1400px) {
+  .header-section{
+    display: flex;
+  }
+  
+  .up-arrow{
+   position: fixed;
+   top: 530px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+  }
+
+  .close-icon{
+    display: none;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 35px;
+  }
+  .name-h2{
+    font-size: 25px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 450px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 20px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 20px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 800px;
+    background-size: 1400px 770px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 100px;
+    height: 150px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 65%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 650px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 30px;
+    width: 60%;
+  }
+  .profile img{
+    transform: scale(0.3);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 65%;
+    height: 350px;
+    
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .project1:hover{
+    transform: scale(0.5);
+  }
+  .project1 img{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 20px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 70px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 30px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 500px;
+   padding-right: 0px;
+  }
+}
+
+
+@media (max-width:1300px) {
+  .header-section{
+    display: flex;
+  }
+  
+  .up-arrow{
+   position: fixed;
+   top: 530px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+  }
+
+  .close-icon{
+    display: none;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 35px;
+  }
+  .name-h2{
+    font-size: 25px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 450px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 20px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 20px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 800px;
+    background-size: 1300px 770px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 100px;
+    height: 150px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 65%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 550px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 30px;
+    width: 60%;
+  }
+  .profile img{
+    transform: scale(0.3);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 65%;
+    height: 350px;
+    
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .project1:hover{
+    transform: scale(0.5);
+  }
+  .project1 img{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 70px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 20px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 500px;
+   padding-right: 0px;
+  }
+}
+
+
+@media (max-width:1200px) {
+  .header-section{
+    display: flex;
+  }
+  
+  .up-arrow{
+   position: fixed;
+   top: 530px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+  }
+
+  .close-icon{
+    display: none;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 35px;
+  }
+  .name-h2{
+    font-size: 25px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 450px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 20px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 20px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 800px;
+    background-size: 1200px 770px;
+    margin-bottom: 0;
+  }
+  .skill-section h1{
+    font-size: 30px;
+  }
+  .skill img{
+    width: 100px;
+    height: 150px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 25px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 65%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 60%;
+    height: 480px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 25px;
+    width: 60%;
+  }
+  .profile img{
+    transform: scale(0.3);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 65%;
+    height: 350px;
+    
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .project1:hover{
+    transform: scale(0.5);
+  }
+  .project1 img{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 25px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 70px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 20px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 450px;
+   padding-right: 0px;
+  }
+}
+
+
+@media (max-width:900px) {
+  .header-section{
+    display: none;
+  }
+   
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 400px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 20px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 20px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 800px;
+    background-size: 900px 770px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 100px;
+    height: 150px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 65%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 450px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 60%;
+  }
+  .profile img{
+    transform: scale(0.3);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 85%;
+    height: 350px;
+    
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .project1:hover{
+    transform: scale(0.5);
+  }
+  .project1 img{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 70px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 20px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 300px;
+   padding-right: 0px;
+  }
+}
+ 
+ 
+@media (max-width:700px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about-name p{
+    font-size: 15px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 700px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 50px;
+    height: 70px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+     width: 65%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 280px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 150px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 620px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 20px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 150px;
+   padding-right: 50px;
+  }
+}
+
+@media (max-width:600px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 50px;
+    height: 50px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 15px;
+  }
+  .about-name p{
+    font-size: 13px;
+    padding: 5px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 600px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 50px;
+    height: 70px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+     width: 65%;
+    height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 280px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 150px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 530px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 30px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 15px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 150px;
+   padding-right: 50px;
+  }
+}
+
+@media (max-width:500px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 30px;
+    height: 30px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 25px;
+  }
+  .about-name p{
+    font-size: 10px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 500px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 50px;
+    height: 70px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+     width: 75%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 65%;
+    height: 270px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 150px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 440px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 15px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 10px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 150px;
+   padding-right: 50px;
+  }
+}
+
+@media (max-width:400px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 30px;
+    height: 30px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 15px;
+  }
+  .about-name p{
+    font-size: 10px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 400px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 50px;
+    height: 70px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+     width: 85%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 85%;
+    height: 260px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 150px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+  }
+  .service-para{
+    border: 3px solid black;
+    /* text-align: justify; */
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 350px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 15px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 10px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 50px;
+   padding-right: 50px;
+  }
+}
+
+@media (max-width:374px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 30px;
+    height: 30px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 15px;
+  }
+  .about-name p{
+    font-size: 10px;
+    padding: 10px;
+    word-spacing: 2px;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 373px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 50px;
+    height: 70px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+     width: 85%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 85%;
+    height: 250px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 150px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 15px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+  }
+  .service-para{
+    border: 3px solid black;
+    text-align: center;
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 325px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 15px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 10px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 50px;
+   padding-right: 50px;
+  }
+}
+ 
+@media (max-width:300px) {
+  *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .up-arrow{
+   position: fixed;
+   top: 500px;
+   right: 0px;
+   animation: float 5s ease-in-out infinite;
+   display: none;
+  }
+
+  .header-section{
+    display: none;
+  }
+  .close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 9;
+    border: 3px solid white;
+    background-color: white;
+  }
+  .name-card{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+    text-align: center;
+  }
+  .name-h1{
+    font-size: 25px;
+  }
+  .name-h2{
+    font-size: 15px;
+  }
+  .social-interaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-interaction a img{
+    width: 30px;
+    height: 30px;
+  }
+  .cube,.face,.scene{
+    display: none;
+  }
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1px;
+    background-color: #FFC759;
+  }
+  .profile{
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    max-width: 100px;
+    padding: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .button a{
+    font-size: 10px;
+  }
+  .about-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .about-name h1{
+    text-align: center;
+    font-size: 15px;
+  }
+  .about-name p{
+    font-size: 10px;
+    padding: 5px;
+    word-spacing: 2px;
+    padding-top: 0;
+    text-align: justify;
+  }
+  
+  .skill-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    height: 600px;
+    background-size: 373px 550px;
+    margin-bottom: 0;
+  }
+  .skill img{
+    width: 30px;
+    height: 50px;
+  }
+  .certification-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .certification-section h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .certificate1{
+    width: 85%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate1 img{
+    width: 85%;
+    height: 230px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .profile img{
+    transform: scale(0.5);
+  }
+  .project1{
+    /* display: flex;
+    flex-direction: column; */
+    width: 300px;
+  }
+  .project1 img{
+    width: 295px;
+    height: 100px;
+    padding: 3px;
+    margin: 0;
+  }
+  .project1 p{
+    font-size: 15px;
+    text-align: justify;
+  }
+  .service{
+    display: flex;
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 15px;
+    width: 80%;
+  }
+  .service-button{
+    width: 80%;
+    height: 100px;
+    font-size: 10px;
+  }
+  .service-para{
+    border: 3px solid black;
+    text-align: center;
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+  .contact-section img{
+    /* width: 250px; */
+    height: 250px;
+    border-radius: 20px;
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-details h1{
+    font-size: 15px;
+  }
+  .phone-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+  }
+  .phone-section img{
+    width: 50px;
+    height: 50px;
+    text-justify: newspaper;
+  }
+  .phone-section strong{
+    font-size: 10px;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+   padding-top: 100px;
+   padding-bottom: 10px;
+   padding-left: 50px;
+   padding-right: 50px;
+  }
+}
+ 
